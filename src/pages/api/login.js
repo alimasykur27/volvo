@@ -13,7 +13,7 @@ export default function handler(req, res) {
         let token = uuidv4()
         Session.prototype.token = token
         Session.prototype.status = 'logged-in'
-        res.setHeader('Set-Cookie', serialize('token', token, { maxAge: 3600, path: '/' })).redirect('/service', 302)
+        res.setHeader('Set-Cookie', serialize('token', token, { maxAge: 3600, path: '/' })).redirect('/dashboard', 302)
       } else {
         res.status(400).json({ message: 'Wrong email or password' })
       }

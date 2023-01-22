@@ -8,13 +8,14 @@ export default function Navbar() {
       <div onClick={() => setExpanded(!expanded)} className={'h-8 w-8 my-4 ' + (expanded ? 'mx-3' : 'mx-auto')} style={{ background: "url('/menu.png')", backgroundSize: "2rem" }} />      
       <div className={'flex flex-col ' + (expanded ? 'block' : 'hidden')}>
         <div className='mx-6 my-2 text-blue-500 text-lg font-semibold'>MENU</div>
-        <a href='#' className='mx-6 my-1 text-gray-600 hover:text-gray-900'>Dashboard</a>
-        <a href='#' className='mx-6 my-1 text-gray-600 hover:text-gray-900'>Inspection</a>
+        <a href='/dashboard' className='mx-6 my-1 text-gray-600 hover:text-gray-900'>Dashboard</a>
+        <a href='/inspection' className='mx-6 my-1 text-gray-600 hover:text-gray-900'>Inspection</a>
         <a href='/service' className='mx-6 my-1 text-gray-600 hover:text-gray-900'>Service</a>
         <a href='/troubleshooting' className='mx-6 my-1 text-gray-600 hover:text-gray-900'>Troubleshooting</a>
         <a href='/pareto' className='mx-6 my-1 text-gray-600 hover:text-gray-900'>Pareto Problem</a>
-        <a href='#' className='mx-6 my-3 text-red-700 hover:text-red-400'>Log Out</a>
+        <a href='/login' className='mx-6 my-3 text-red-700 hover:text-red-400'>Log Out</a>
       </div>
     </div>
+    
   );
 }
