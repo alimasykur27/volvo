@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Navbar from '@/components/navbar'
 
-export default function Pareto() {
+export default function Service() {
   return (
     <>
       <Head>
@@ -12,9 +13,7 @@ export default function Pareto() {
         <link href="/css/output.css" rel="stylesheet" />
       </Head>
       <div className='w-full min-h-screen flex flex-col'>
-        <div className='w-full h-14 flex flex-row bg-gray-400'>
-
-        </div>
+        <Navbar />
         <div className='flex-1 flex flex-row bg-gray-50'>
           <div className='flex-1 flex justify-center bg-white'>
             <img src='/service-img.jpg' className='m-auto items-center' />

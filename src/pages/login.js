@@ -1,6 +1,30 @@
 import Head from "next/head";
 
+
 export default function Login() {
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    const form = new FormData(event.target)
+    const data = {
+      email: form.get('email'),
+      password: form.get('password')
+    }
+
+    fetch('http://localhost:3000/api/login', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      if (res.redirected) {
+        window.location = res.url;
+      }
+    })
+  }
+
   return (
     <>
       <Head>
@@ -16,7 +40,7 @@ export default function Login() {
             <div className="w-4/5 text-3xl text-center items-center justify-center">
               <h1>MONITORING PROGRAM CUSTOMER SUPPORT AGREEMENT</h1>
             </div>
-            <div className="flex flex-col items-center justify-center py-5">
+            <form className="flex flex-col items-center justify-center py-5" onSubmit={(event) => handleSubmit(event)}>
               <div className="flex flex-col items-center justify-center p-5">
                 <input
                   className="text-center"
@@ -36,11 +60,11 @@ export default function Login() {
               </div>
               <div className="border-2 w-full bg-gray-200 -mt-3"></div>
               <div className="flex flex-col items-center justify-center py-5 mt-2">
-                <button className="border-2 text-white bg-gray-700 rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-gray-700">
+                <button type="submit" className="border-2 text-white bg-gray-700 rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-gray-700">
                   Login
                 </button>
               </div>
-            </div>
+            </form>
           </div>
           <div className="w-3/5">
             <img src="login.png" alt="Login" />
