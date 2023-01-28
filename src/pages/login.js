@@ -35,7 +35,7 @@ export default function Login() {
         <link href="/css/output.css" rel="stylesheet" />
       </Head>
       <div className="flex flex-col items-center justify-center min-h-screen py-2">
-        <div className="bg-white flex w-4/5 max-w-6xl">
+        <div className="bg-white flex w-4/5 max-w-4xl">
           <div className="w-2/5 flex flex-col items-center justify-center shadow-2xl rounded-2xl">
             <div className="w-4/5 text-3xl text-center items-center justify-center">
               <h1>MONITORING PROGRAM CUSTOMER SUPPORT AGREEMENT</h1>
@@ -43,7 +43,7 @@ export default function Login() {
             <form className="flex flex-col items-center justify-center py-5" onSubmit={(event) => handleSubmit(event)}>
               <div className="flex flex-col items-center justify-center p-5">
                 <input
-                  className="text-center"
+                  className="text-center w-64"
                   type="email"
                   name="email"
                   placeholder="Enter your email"
@@ -52,7 +52,7 @@ export default function Login() {
               <div className="border-2 w-full bg-gray-200 -mt-3"></div>
               <div className="flex flex-col items-center justify-center py-5 mt-4">
                 <input
-                  className="text-center"
+                  className="text-center w-64"
                   type="password"
                   name="password"
                   placeholder="Password"
