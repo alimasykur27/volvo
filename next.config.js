@@ -2,8 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    email: 'volvoadmin@volvo.com',
-    password: 'volvoadmin123'
+    EMAIL: 'volvoadmin@volvo.com',
+    PASSWORD: 'volvoadmin123',
+    SECRET_COOKIE_PASSWORD: 'volvo_monitoring_articulated_haulers_a40g'
   }
 }
 

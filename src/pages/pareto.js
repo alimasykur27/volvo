@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '@/components/navbar'
+import Auth from '@/components/auth'
 
 export default function Pareto() {
   return (
-    <>
+    <Auth>
       <Head>
         <title>Pareto Problem | Volvo Monitoring ADT A40G</title>
         <meta name="description" content="Deskripsi halaman" />
@@ -15,23 +16,18 @@ export default function Pareto() {
       <div className='w-full min-h-screen flex flex-col'>
         <Navbar />
         <div className='flex-1 mt-14 mx-8 bg-gray-50 flex flex-col'>
-          <div className='flex-1 flex flex-row'>
-            <img href='#' className='flex-1 h-80 m-4 bg-gray-400' />
-            <img href='#' className='flex-1 h-80 m-4 bg-gray-400' />
+          <div className='mt-4 mb-2 ml-4 text-gray-700 text-3xl font-semibold'>
+            Pareto Problem
+          </div>
+          <div className='w-full flex flex-row my-4'>
+            <img src='/pareto/pareto1.jpg' className='w-[55%] my-4 mx-auto' />
+            <img src='/pareto/pareto2.jpg' className='w-[40%] my-4 mx-auto'/>
           </div>
           <div className='flex flex-row m-2'>
-            <div className='flex-1 h-64 m-2 bg-gray-400'>
-
-            </div>
-            <div className='flex-1 h-64 m-2 bg-gray-400'>
-
-            </div>
-            <div className='flex-1 h-64 m-2 bg-gray-400'>
-
-            </div>
+            <img src='/pareto/pareto3.jpg' className='flex-1 my-4 mx-auto'/>
           </div>
         </div>
       </div>
-    </>
+    </Auth>
   )
 }
