@@ -15,7 +15,7 @@ export default function Pareto() {
       </Head>
       <div className='w-full min-h-screen flex flex-col'>
         <Navbar />
-        <div className='flex-1 mt-14 mx-8 bg-gray-50 flex flex-col'>
+        <div className='flex-1 ml-64 mt-14 mr-8 bg-gray-50 flex flex-col'>
           <div className='mt-4 mb-2 ml-4 text-gray-700 text-3xl font-semibold'>
             Pareto Problem
           </div>

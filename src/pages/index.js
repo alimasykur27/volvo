@@ -15,7 +15,7 @@ export default function Dashboard() {
       </Head>
       <div className="w-full min-h-screen flex flex-col">
         <Navbar />
-        <div className='flex-1 mt-14 bg-gray-50 flex flex-col'>
+        <div className='flex-1 ml-56 mt-14 bg-gray-50 flex flex-col'>
           <div className='flex flex-row m-4 h-16'>
             <div className='flex w-3/5 bg-white'>
               <div className="flex-1 flex flex-row justify-center items-center">

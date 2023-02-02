@@ -14,7 +14,7 @@ export default function Troubleshooting() {
       </Head>
       <div className='w-full min-h-screen flex flex-col'>
         <Navbar />
-        <div className='flex-1 flex flex-row bg-gray-50'>
+        <div className='ml-56 flex-1 flex flex-row bg-gray-50'>
           <div className='flex-1 flex justify-center bg-white'>
             <img src='/troubleshoot-img.jpg' className='m-auto items-center' />
           </div>
