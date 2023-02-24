@@ -2,8 +2,18 @@ import Head from "next/head";
 import Navbar from "@/components/navbar";
 import { GrServices } from "react-icons/gr";
 import Auth from "@/components/auth";
+import { getJson } from "@/lib/contentData";
 
-export default function Dashboard() {
+export async function getStaticProps() {
+  let contentData = getJson()
+  return {
+    props: {
+      contentData: contentData.dashboard
+    }
+  }
+}
+
+export default function Dashboard({ contentData }) {
   return (
     <Auth>
       <Head>
@@ -34,14 +44,14 @@ export default function Dashboard() {
               <div className="flex h-full bg-white">
                 <div className="flex-1 flex flex-row justify-center items-center">
                   <GrServices className="text-4xl text-black m-2" />
-                  <div className="text-4xl text-red-500 font-normal m-2">ADT-25</div>
+                  <div className="text-4xl text-red-500 font-normal m-2">{contentData.modelUnit}</div>
                 </div>
               </div>
             </div>
             <div className='flex-1 m-2 bg-gray-400'>
               <div className="flex h-full bg-white">
                 <div className="flex-1 flex flex-col justify-center items-center">
-                  <div className="text-4xl text-red-500 font-normal m-2">JBA</div>
+                  <div className="text-4xl text-red-500 font-normal m-2">{contentData.siteUnit}</div>
                   <div className="text-l text-black font-light m-2">SITE UNIT</div>
                 </div>
               </div>
@@ -49,7 +59,7 @@ export default function Dashboard() {
             <div className='flex-1 m-2 bg-gray-400'>
               <div className="flex h-full bg-white">
                 <div className="flex-1 flex flex-col justify-center items-center">
-                  <div className="text-4xl text-red-500 font-normal m-2">RFU</div>
+                  <div className="text-4xl text-red-500 font-normal m-2">{contentData.statusUnit}</div>
                   <div className="text-l text-black font-light m-2">STATUS UNIT</div>
                 </div>
               </div>
@@ -57,7 +67,7 @@ export default function Dashboard() {
             <div className='flex-1 mx-2 bg-gray-400'>
               <div className="flex h-full bg-white">
                 <div className="flex-1 flex flex-col justify-center items-center">
-                  <div className="text-4xl text-red-500 font-normal m-2">84 %</div>
+                  <div className="text-4xl text-red-500 font-normal m-2">{contentData.actualPa}</div>
                   <div className="text-l text-black font-light m-2">ACTUAL PA</div>
                 </div>
               </div>
