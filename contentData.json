@@ -3,7 +3,13 @@
     "modelUnit": "ADT-25",
     "siteUnit": "JBA",
     "statusUnit": "RFU",
-    "actualPa": "84 %"
-  }
-
+    "actualPa": "84"
+  },
+  "serviceType": [
+    "inspection",
+    "service 1",
+    "service 2",
+    "service 3",
+    "troubleshot"
+  ]
 }

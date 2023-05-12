@@ -29,6 +29,7 @@ export default function Navbar() {
         <a href='/service' className='px-4 py-2 border-r-4 border-r-transparent text-gray-500 hover:text-blue-600 hover:bg-blue-100 hover:border-r-blue-400'>Service</a>
         <a href='/troubleshooting' className='px-4 py-2 border-r-4 border-r-transparent text-gray-500 hover:text-blue-600 hover:bg-blue-100 hover:border-r-blue-400'>Troubleshooting</a>
         <a href='/pareto' className='px-4 py-2 border-r-4 border-r-transparent text-gray-500 hover:text-blue-600 hover:bg-blue-100 hover:border-r-blue-400'>Pareto Problem</a>
+        <a href='/admin' className='px-4 py-2 border-r-4 border-r-transparent text-gray-500 hover:text-blue-600 hover:bg-blue-100 hover:border-r-blue-400'>Admin</a>
       </div>
     </div>
     
