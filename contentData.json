@@ -6,10 +6,15 @@
     "actualPa": "84"
   },
   "serviceType": [
-    "inspection",
-    "service 1",
-    "service 2",
-    "service 3",
-    "troubleshot"
-  ]
+    "Inspection",
+    "Service 1",
+    "Service 2",
+    "Service 3",
+    "Troubleshot"
+  ],
+  "paretoImages": {
+    "pareto1": "/pareto/pareto1.jpg",
+    "pareto2": "/pareto/pareto2.jpg",
+    "pareto3": "/pareto/pareto3.jpg"
+  }
 }

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Auth from "@/components/auth";
+import UploadReport from "@/components/uploadReport";
 
 export default function Inspection() {
   return (
@@ -36,6 +37,7 @@ export default function Inspection() {
                   <a href='/api/download/Inspection%20Program_4.pdf' className='px-4 py-2 block text-gray-800 cursor-pointer hover:bg-gray-300'>Inspection Program 4</a>
                 </ul>
               </div>
+              <UploadReport />
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '@/components/navbar'
 import Auth from '@/components/auth'
+import UploadReport from '@/components/uploadReport'
 
 export default function Service() {
   return (
@@ -34,6 +35,7 @@ export default function Service() {
                   <a href='/api/download/Service%20Program_3.pdf' className='px-4 py-2 block text-gray-800 cursor-pointer hover:bg-gray-300'>Service Program 3</a>
                 </ul>
               </div>
+              <UploadReport />
             </div>
           </div>
         </div>
