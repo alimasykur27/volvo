@@ -8,5 +8,5 @@ export function getJson() {
 }
 
 export function saveJson(jsonData) {
-  fs.writeFileSync(path.resolve(process.cwd(), '../../contentData.json'), JSON.stringify(jsonData))
+  fs.writeFileSync(path.resolve(process.cwd(), 'contentData.json'), JSON.stringify(jsonData))
 }

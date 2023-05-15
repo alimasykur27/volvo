@@ -27,7 +27,7 @@ export default function Service() {
                 <p>The Service Programme is a checklist of all scheduled maintenance intervals for a specific range of models under normal operating conditions. The scheduled maintenance intervals must be performed as specified in order to maintain the machine for maximum reliability and performance.</p>
                 <p>For any factory warranty to be valid, the machine has to be maintained according to this Service Programme. The completed Service Programmes must be kept on file. Some service steps may be performed by an operator unless otherwise specified in the Operator's Manual. All other service steps must be performed by a qualified service technician.</p>
               </div>
-              <div className='dropdown mx-auto flex flex-col'>
+              <div className='dropdown mx-auto mb-4 flex flex-col'>
                 <button className='w-[50%] px-6 py-2 mx-auto border-2 border-gray-800 rounded-full text-center text-gray-800 font-medium tracking-widest cursor-default'>DOWNLOAD</button>
                 <ul className='dropdown-menu hidden w-[50%] mx-auto border-2 border-gray-300 rounded-lg shadow-lg shadow-gray-400'>
                   <a href='/api/download/Service%20Program.pdf' className='px-4 py-2 block text-gray-800 cursor-pointer hover:bg-gray-300'>Service Program 1</a>
@@ -35,7 +35,7 @@ export default function Service() {
                   <a href='/api/download/Service%20Program_3.pdf' className='px-4 py-2 block text-gray-800 cursor-pointer hover:bg-gray-300'>Service Program 3</a>
                 </ul>
               </div>
-              <UploadReport />
+              <UploadReport fileName={'ServiceReport.pdf'} />
             </div>
           </div>
         </div>

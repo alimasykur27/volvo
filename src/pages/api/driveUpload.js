@@ -4,7 +4,6 @@ const { google } = require('googleapis')
 const multer = require('multer')
 const path = require('path')
 const { Readable } = require('stream')
-const key = require('../../../credentials/rising-city-343406-541f6be3fe18.json')
 const keyFile = path.resolve(process.cwd(), 'credentials/rising-city-343406-541f6be3fe18.json')
 
 const scopes = ['https://www.googleapis.com/auth/drive']
@@ -28,7 +27,7 @@ async function driveUploadHandler(req, res) {
       const file = await service.files.create({
         resource: { 
           name: new Date().toLocaleString() + '-' + req.file.originalname,
-          parents: ['1yiBl94tQQopSesLNLOycROLVeu1RZ_n7'],
+          parents: [process.env.DRIVE_FOLDER_ID],
         },
         media: {
           mimeType: 'application/pdf',
@@ -36,7 +35,6 @@ async function driveUploadHandler(req, res) {
         },
         fields: 'id',
       });
-      console.log('File Id:', file.data.id);
       return res.status(200).json({ message: 'Uploaded to Google Drive successfully' });
     })
   } catch (err) {

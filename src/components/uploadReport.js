@@ -1,32 +1,54 @@
 import React, { useRef } from 'react';
 
-const UploadReport = () => {
+const UploadReport = ({ fileName }) => {
   const fileInputRef = useRef(null);
+
+  const uploadToDrive = (formData, successMsg) => {
+    fetch('/api/driveUpload', {
+      method: 'POST',
+      body: formData
+    }).then(res => {
+      if (res.redirected) {
+        window.location = res.url;
+      } else if (res.status == 200) {
+        if (successMsg)
+          alert(successMsg)
+      } else {
+        const { message } = res.json()
+        if (message)
+          alert(message)
+      }
+      return
+    })
+  }
 
   const handleUpload = () => {
     fileInputRef.current.click();
   };
 
-  const handleFileChange = (event) => {
+  const handleFileChange = (event, fileName) => {
     const file = event.target.files[0];
-    // TODO: Handle the file upload logic here
-    console.log('Selected file:', file);
-    alert("coming soon");
+    if (!file)
+      return
+    const formData = new FormData()
+    formData.append('pdf_file', file, fileName)
+    uploadToDrive(formData, 'Report file uploaded to drive successfully')
   };
 
   return (
     <div className="mx-auto flex flex-col py-2">
       <button
         className="w-[50%] px-6 py-2 mx-auto border-2 border-gray-800 rounded-full text-center text-gray-800 hover:bg-gray-800 hover:text-white font-medium tracking-widest"
-        onClick={handleUpload}
+        onClick={(event) => handleUpload()}
       >
-        UPLOAD
+        UPLOAD REPORT
       </button>
       <input
-        type="file"
+        type='file'
+        accept='application/pdf'
         ref={fileInputRef}
         style={{ display: 'none' }}
-        onChange={handleFileChange}
+        onChange={(event) => handleFileChange(event, fileName)}
       />
     </div>
   );

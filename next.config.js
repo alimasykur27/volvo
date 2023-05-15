@@ -4,7 +4,8 @@ const nextConfig = {
   env: {
     EMAIL: 'volvoadmin@volvo.com',
     PASSWORD: 'volvoadmin123',
-    SECRET_COOKIE_PASSWORD: 'volvo_monitoring_articulated_haulers_a40g'
+    SECRET_COOKIE_PASSWORD: 'volvo_monitoring_articulated_haulers_a40g',
+    DRIVE_FOLDER_ID: '1yiBl94tQQopSesLNLOycROLVeu1RZ_n7'
   },
   // webpack: (config, { isServer }) => {
   //   if (!isServer) {

@@ -10,6 +10,8 @@ async function updateContentHandler(req, res) {
       return res.redirect('/login', 302)
   
     const { contentData } = req.body
+    if (!contentData)
+      return res.status(400).json({ message: 'Invalid request body' })
     saveJson(contentData)
     return res.status(200).json({ message: 'Content data saved successfully' })
   } catch(err) {
