@@ -104,7 +104,7 @@ export default function Admin({ contentData }) {
       }
       updateContentData(newContentData)
     }
-    window.open = `https://wa.me/${waNumber}/?` + new URLSearchParams({ text: `[${type.toUpperCase()}]\n${message}`})
+    window.open(`https://wa.me/${waNumber}/?` + new URLSearchParams({ text: `[${type.toUpperCase()}]\n${message}`}))
     alert('Redirecting to https://wa.me in a new tab')
   }
 
